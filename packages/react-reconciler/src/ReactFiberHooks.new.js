@@ -682,7 +682,7 @@ function mountWorkInProgressHook(): Hook {
 
     next: null,
   };
-
+  // workInProgressHook 指向最新的正在运行的hook
   if (workInProgressHook === null) {
     // This is the first hook in the list
     currentlyRenderingFiber.memoizedState = workInProgressHook = hook;
@@ -690,6 +690,7 @@ function mountWorkInProgressHook(): Hook {
     // Append to the end of the list
     workInProgressHook = workInProgressHook.next = hook;
   }
+
   return workInProgressHook;
 }
 

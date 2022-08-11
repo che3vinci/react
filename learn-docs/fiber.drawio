@@ -1,0 +1,13 @@
+<mxfile host="65bd71144e">
+    <diagram id="ObwKAttcb_7AwPkUqKBu" name="Page-1">
+        <mxGraphModel dx="542" dy="458" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;quot;source code pro&amp;quot; , &amp;quot;menlo&amp;quot; , &amp;quot;monaco&amp;quot; , &amp;quot;courier new&amp;quot; , monospace , &amp;quot;menlo&amp;quot; , &amp;quot;monaco&amp;quot; , &amp;quot;courier new&amp;quot; , monospace ; font-size: 13px ; line-height: 20px&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #569cd6&quot;&gt;function&lt;/span&gt; &lt;span style=&quot;color: #dcdcaa&quot;&gt;workLoopSync&lt;/span&gt;() {&lt;/div&gt;&lt;div&gt;  &lt;span style=&quot;color: #6a9955&quot;&gt;// Already timed out, so perform work without checking if we need to yield.&lt;/span&gt;&lt;/div&gt;&lt;div&gt;  &lt;span style=&quot;color: #c586c0&quot;&gt;while&lt;/span&gt; (&lt;span style=&quot;color: #9cdcfe&quot;&gt;workInProgress&lt;/span&gt; !== &lt;span style=&quot;color: #569cd6&quot;&gt;null&lt;/span&gt;) {&lt;/div&gt;&lt;div&gt;    &lt;span style=&quot;color: #dcdcaa&quot;&gt;performUnitOfWork&lt;/span&gt;(&lt;span style=&quot;color: #9cdcfe&quot;&gt;workInProgress&lt;/span&gt;);&lt;/div&gt;&lt;div&gt;  }&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="90" width="120" height="60" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
