@@ -80,7 +80,7 @@ export type Fiber = {|
   // alternate versions of the tree. We put this on a single object for now to
   // minimize the number of objects created during the initial render.
 
-  // Tag identifying the type of fiber.
+  // Tag identifying the type of fiber. //就是和type字段一个意思。只是用整数来表示
   tag: WorkTag,
 
   // Unique identifier of this child.
@@ -94,6 +94,7 @@ export type Fiber = {|
   type: any,
 
   // The local state associated with this fiber.
+  // 一般是一个dom节点
   stateNode: any,
 
   // Conceptual aliases
@@ -109,7 +110,7 @@ export type Fiber = {|
   return: Fiber | null,
 
   // Singly Linked List Tree Structure.
-  child: Fiber | null,
+  child: Fiber | null, // 第一个子节点。
   sibling: Fiber | null,
   index: number,
 
@@ -121,14 +122,14 @@ export type Fiber = {|
     | RefObject,
 
   // Input is the data coming into process this fiber. Arguments. Props.
-  pendingProps: any, // This type will be more specific once we overload the tag.
-  memoizedProps: any, // The props used to create the output.
+  pendingProps: any, // This type will be more specific once we overload the tag. //传入的props
+  memoizedProps: any, // The props used to create the output. // 上次计算的props?
 
   // A queue of state updates and callbacks.
   updateQueue: mixed,
 
   // The state used to create the output
-  memoizedState: any,
+  memoizedState: any, // 该函数组件的hook信息存在此字段中?
 
   // Dependencies (contexts, events) for this fiber, if it has any
   dependencies: Dependencies | null,
@@ -161,6 +162,7 @@ export type Fiber = {|
   // This is a pooled version of a Fiber. Every fiber that gets updated will
   // eventually have a pair. There are cases when we can clean up pairs to save
   // memory if we need to.
+  //对应正在work in progress 的Fiber。 有2个Fiber，一个已经Done的,onScreen的(叫current)，一个在wip中。
   alternate: Fiber | null,
 
   // Time spent rendering this Fiber and its descendants for the current update.
